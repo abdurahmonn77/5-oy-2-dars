@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/main.css">
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+      </style>
+    <title>Countries</title>
+</head>
+<body>
+    <header class="w-[1440px] py-[24px]">
+        <div class="w-[1300px] px-[10px] mx-auto">
+            <div class="flex justify-between">
+                <h1 class="font-bold text-[24px]">Where in the world?</h1>
+            <div class="flex gap-[70px]">
+                <div class="flex gap-[20px]">
+                    <div class="heart-wrapper flex w-[50px] h-[50px] items-center gap-1 justify-center rounded-[50%] border-[1px] border-black cursor-pointer">
+                        <span class="likedCount">0</span>
+                        <img src="./images/heart.svg" alt="Liked icon" width="20" height="20">
+                    </div>
+                    <div class="saved-wrapper flex w-[50px] h-[50px] items-center justify-center gap-1 rounded-[50%] border-[1px] border-black cursor-pointer">
+                        <span class="savedCount">0</span>
+                        <img src="./images/saved.svg" alt="saved icon" width="20" height="20">
+                    </div>
+                </div>
+                <div class="flex items-center gap-[2px]">
+                    <img src="./images/moon.svg" alt="dark mode icon" width="15" height="13">
+                    <span class="text-[16px] font-semibold text-[#111517]">Dark Mode</span>
+                </div>
+                </div>
+            </div>
+        </div>
+    </header>
+   <main>
+    <section class="bg-[#FAFAFA] py-[48px]">
+        <div class="w-[1300px] px-[10px] mx-auto">
+            <form action="" class="flex justify-between">
+                <input class="search-input input-bg outline-0 w-[480px] py-[18px] rounded-[5px] pl-[74px]" type="text" name="Country name" placeholder="Search for a country…">
+                <select class="capital-select w-[200px] py-[18px] outline-0 pl-[24px]">
+                    <option value="All" >All</option>
+                </select>
+            </form>
+            <ul class="list flex justify-between flex-wrap gap-10">
+
+            </ul>
+        </div>
+        
+    </section>
+   </main>
+</body>
+<script src="./JS/countries.js"></script>
+<script src="./JS/main.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+          }
+        }
+      }
+    }
+  </script>
+</html>
